@@ -1,5 +1,6 @@
 ---
-output: github_document
+output: 
+  github_document
 ---
 ```{r, include = FALSE}
 options(width = 100)
@@ -52,6 +53,6 @@ test_interactions(sil.null, 0.95)[1:10, ]
 The development version of `econullnetr` can be installed from GitHub:
 
 ```{r, eval = FALSE}
-#install.packages("devtools")
+# install.packages("devtools")
 devtools::install_github("ivaughan/econullnetr")
 ```
