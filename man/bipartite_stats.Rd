@@ -136,7 +136,7 @@ Dormann, C.F., Gruber B. & Frund, J. (2008). Introducing the
   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E.,
   Woodward, G. and Symondson, W.O.C. (2017) econullnetr: an R package using null
   models to analyse the structure of ecological networks and identify
-  resource selection/ \emph{Methods in Ecology and Evolution}, in press.
+  resource selection. \emph{Methods in Ecology and Evolution}, in press.
 }
 \seealso{
 \code{\link{generate_null_net}}, \code{\link{plot_bipartite}},

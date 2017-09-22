@@ -86,11 +86,12 @@ Returns an object of class "nullnet", which is a list containing
  }
 }
 \description{
-Uses the algorithm of Agusti \emph{et al}. (2003) to specify and run a null model
-  for an ecological network based upon interaction data and independent
-  estimates of resource abundance.  Typically, network nodes represent
-  species, and the following documentation uses the term species in place
-  of node, but this need not be the case.
+Uses the algorithm of Agusti \emph{et al}. (2003) to specify and run a null
+  model for an ecological network based upon interaction data and
+  independent estimates of resource abundance (see Vaughan \emph{et al}.,
+  in press for full details).  Typically, network nodes represent species,
+  and the following documentation uses the term species in place of node,
+  but this need not be the case.
 }
 \details{
 A basic call to \code{generate_null_net} only needs two arguments:

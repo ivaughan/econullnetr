@@ -17,7 +17,7 @@ preferences will be plotted}
 \item{signif.level}{An optional value specifying the threshold used for
 testing for 'significant' deviations from the null model.  Defaults to 0.95}
 
-\item{style}{An optional string to set whether a dotchart of bar chart is
+\item{style}{An optional string to set whether a dotchart or bar chart is
 plotted. The default (\code{style = "dots"}) is a Cleveland dot plot,
 whilst the alternative (\code{style = "bars"}) is a bar chart of the type
 used by King \emph{et al.} (2010) and Davey \emph{et al.} (2013).}

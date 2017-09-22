@@ -16,9 +16,9 @@ Broadstone.prey
 }
 \description{
 The abundance of the 19 macroinvertebrate taxa present in the Broadstone food
-  web in August 1996 \code{\link{Broadstone}} (see Woodward \emph{et al}. 2005
-  for full details).  The values are the total number of individuals collected
-  from 30 Surber samples.
+  web in August 1996 (see Woodward \emph{et al}. 2005 for full details).
+  The values are the total number of individuals collected from 30 Surber
+  samples.
 }
 \keyword{datasets}
 
