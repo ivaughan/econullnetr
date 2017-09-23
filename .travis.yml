@@ -11,3 +11,6 @@ r:
   - release
   - devel
 
+r_github_packages:
+  - hadley/devtools
+
