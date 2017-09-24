@@ -12,7 +12,7 @@ Suggests: cheddar, igraph,
 Author: Ian Vaughan
 Maintainer: Ian Vaughan <vaughanip@cardiff.ac.uk>
 BugReports: https://github.com/ivaughan/econullnetr/issues
-Description: A package of tools for using null models to analyse ecological
+Description: Tools for using null models to analyse ecological
     networks (e.g. food webs, flower-visitation networks, seed-dispersal
     networks) and detect resource preferences or non-random interactions among
     network nodes. Tools are provided to run null models, test for and plot

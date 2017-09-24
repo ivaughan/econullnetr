@@ -368,7 +368,7 @@ Hudson, L.N., Emerson, R., Jenkins, G.B., Layer, K., Ledger, M.E., Pichler, D.E.
 
 Pearson, C.E. (2015) *Effects of agricultural intensification on the ecology of upland stream invertebrate communities*. Unpublished PhD thesis, Cardiff University.
 
-Song C., Rohr, R.P. & Saavedra, S. (2017) Why are some plant-pollinator networks more nested than others? *Journal of Animal Ecology*, doi:10.1111/1365-2656.12749
+Song C., Rohr, R.P. & Saavedra, S. (2017) Why are some plant-pollinator networks more nested than others? *Journal of Animal Ecology*, in press.
 
 Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.L., Woodward, G. & Symondson, W.O.C. (2017) econullnetr: an R package using null modelling to analyse the structure of ecological networks and identify resource selection. *Methods in Ecology and Evolution*, in press.
 
