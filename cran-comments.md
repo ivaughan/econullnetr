@@ -1,3 +1,8 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+* Added references in the 'Description' field of the DESCRIPTION file.
+
 ## Test environments
 * local Windows 7, R 3.4.1
 * win-builder (R-devel)
