@@ -89,7 +89,7 @@ Returns an object of class "nullnet", which is a list containing
 Uses the algorithm of Agusti \emph{et al}. (2003) to specify and run a null
   model for an ecological network based upon interaction data and
   independent estimates of resource abundance (see Vaughan \emph{et al}.,
-  in press for full details).  Typically, network nodes represent species,
+  2018 for full details).  Typically, network nodes represent species,
   and the following documentation uses the term species in place of node,
   but this need not be the case.
 }
@@ -173,21 +173,26 @@ Agusti, N., Shayler, S.P., Harwood, J.D., Vaughan, I.P.,
   sustaining spiders in arable ecosystems: prey detection within predators
   using molecular markers. \emph{Molecular Ecology}, \strong{12}, 3467--3475.
 
-  King, R.A, Vaughan, I.P., Bell, J.R., Bohan, D.A, & Symondson, W.O.C.
-  (2010) Prey choice by carabid beetles feeding on an earthworm community
-  analysed using species- and lineage-specific PCR primers. \emph{Molecular
-  Ecology}, \strong{19}, 1721--1732.
-
   Davey, J.S., Vaughan, I.P., King, R.A., Bell, J.R., Bohan, D.A.,
   Bruford, M.W., Holland, J.M. & Symondson, W.O.C. (2013) Intraguild
   predation in winter wheat: prey choice by a common epigeal carabid
   consuming spiders. \emph{Journal of Applied Ecology}, \strong{50},
   271--279.
 
-  Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E.,
-  Woodward, G. and Symondson, W.O.C. (2017) econullnetr: an R package using null
-  models to analyse the structure of ecological networks and identify
-  resource selection. \emph{Methods in Ecology and Evolution}, in press.
+  King, R.A, Vaughan, I.P., Bell, J.R., Bohan, D.A, & Symondson, W.O.C.
+  (2010) Prey choice by carabid beetles feeding on an earthworm community
+  analysed using species- and lineage-specific PCR primers. \emph{Molecular
+  Ecology}, \strong{19}, 1721--1732.
+
+  Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
+  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of
+  pastoral intensification on the feeding interactions of generalist
+  predators in streams. \emph{Molecular Ecology}, \strong{27}, 590-602.
+
+  Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E., Woodward, G. &
+  Symondson, W.O.C. (2018) econullnetr: an R package using null models to
+  analyse the structure of ecological networks and identify resource
+  selection. \emph{Methods in Ecology and Evolution}, \strong{9}, 728--733.
 }
 \seealso{
 \code{\link{test_interactions}}, \code{\link{plot_preferences}}

@@ -10,8 +10,9 @@
 #'   abundance of each macroinvertebrate taxon summed across three 1-minute
 #'   kick-samples in each stream.
 #'
-#' @source Pearson, C.E. (2015) \emph{Effects of agricultural intensification
-#'   on the ecology of upland stream invertebrate communities}. Unpublished
-#'   PhD thesis, Cardiff University.
+#' @source Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
+#'  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral
+#'  intensification on the feeding interactions of generalist predators in
+#'  streams. \emph{Molecular Ecology}, \strong{27}, 590-602.
 #'
 "WelshStreams.prey"

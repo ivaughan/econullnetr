@@ -9,9 +9,10 @@
   genus, whilst columns 2--17 indicate which of the 16 potential prey taxa can be
     consumed (1) or are forbidden (0).}
 \source{
-Pearson, C.E. (2015) \emph{Effects of agricultural intensification
-  on the ecology of upland stream invertebrate communities}. Unpublished
-  PhD thesis, Cardiff University.
+Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
+ Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral
+ intensification on the feeding interactions of generalist predators in
+ streams. \emph{Molecular Ecology}, \strong{27}, 590-602.
 }
 \usage{
 WelshStreams.fl

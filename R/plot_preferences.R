@@ -65,10 +65,10 @@
 #'   analysed using species- and lineage-specific PCR primers. \emph{Molecular
 #'   Ecology}, \strong{19}, 1721--1732.
 #'
-#'   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E., Woodward, G.
-#'   and Symondson, W.O.C. (2017) econullnetr: an R package using null models
-#'   to analyse the structure of ecological networks and identify resource
-#'   selection. \emph{Methods in Ecology and Evolution}, in press.
+#'   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E., Woodward, G. &
+#'   Symondson, W.O.C. (2018) econullnetr: an R package using null models to
+#'   analyse the structure of ecological networks and identify resource
+#'   selection. \emph{Methods in Ecology and Evolution}, \strong{9}, 728--733.
 #'
 #' @examples
 #' null.1 <- generate_null_net(WelshStreams[, 2:18], WelshStreams.prey[, 2:17],

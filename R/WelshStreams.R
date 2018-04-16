@@ -4,10 +4,10 @@
 #'   individuals of two macroinvertebrate predator species (the caddisfly
 #'   \emph{Rhyacophila dorsalis} and the stonefly \emph{ Dinocras cephalotes}).
 #'   Data were collected in Dec 2013 from six streams spread across an
-#'   agricultural intensity gradient as part of a wider study (Pearson 2015).
-#'   The data comprise presence or absence of predation by each predator on 16
-#'   potential prey taxa determined using next generation sequencing of predator
-#'   gut contents.
+#'   agricultural intensity gradient as part of a wider study (Pearson
+#'   \emph{et al}. 2018). The data comprise presence or absence of predation
+#'   by each predator on 16 potential prey taxa determined using next
+#'   generation sequencing of predator gut contents.
 #'   There are three accompanying data sets:
 #'   \enumerate{
 #'     \item \code{\link{WelshStreams.prey}}, which gives the mean abundance of each
@@ -27,8 +27,9 @@
 #'   \emph{Rhyacophila}). The remaining 16 columns represent the potential prey
 #'   taxa, which were either predated (1) or not (0) by each individual predator.
 #'
-#' @source Pearson, C.E. (2015) \emph{Effects of agricultural intensification
-#'   on the ecology of upland stream invertebrate communities}. Unpublished
-#'   PhD thesis, Cardiff University.
+#' @source Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
+#'  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral
+#'  intensification on the feeding interactions of generalist predators in
+#'  streams. \emph{Molecular Ecology}, \strong{27}, 590-602.
 
 "WelshStreams"

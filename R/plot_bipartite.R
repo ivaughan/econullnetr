@@ -30,10 +30,10 @@
 #'   Dormann, C.F., Gruber B. & Frund, J. (2008). Introducing the bipartite
 #'   package: analysing ecological networks. \emph{R news}, \strong{8}, 8-11.
 #'
-#'   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E.,
-#'   Woodward, G. and Symondson, W.O.C. (2017) econullnetr: an R package using null
-#'   models to analyse the structure of ecological networks and identify
-#'   resource selection. \emph{Methods in Ecology and Evolution}, in press.
+#'   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E., Woodward, G. &
+#'   Symondson, W.O.C. (2018) econullnetr: an R package using null models to
+#'   analyse the structure of ecological networks and identify resource
+#'   selection. \emph{Methods in Ecology and Evolution}, \strong{9}, 728--733.
 #'
 #' @examples
 #'
