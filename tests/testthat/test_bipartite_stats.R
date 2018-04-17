@@ -1,3 +1,6 @@
+# Use readRDS to view reference data sets
+#   e.g. readRDS("tests/testthat/sl_test")
+
 library(econullnetr)
 context("Bipartite_stats")
 
