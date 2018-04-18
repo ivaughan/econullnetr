@@ -41,16 +41,17 @@ test_that("Check bipartite specieslevel compatibility",{
 
 
 test_that("Consistent outputs of the bipartite statistics at all 3 levels",{
-  skip_on_cran()
-  set.seed(1234)
   expect_equal_to_reference(bipartite_stats(s.1, index.type = "specieslevel",
-                                            indices = "ALLBUTD",
+                                            indices = c("degree",
+                                                        "species strength"),
                                             prog.count = FALSE), "sl_test")
   expect_equal_to_reference(bipartite_stats(s.1, index.type = "grouplevel",
-                                            indices = "ALLBUTDD",
+                                            indices = c("mean number of links",
+                                                        "partner diversity"),
                                             prog.count = FALSE), "gl_test")
   expect_equal_to_reference(bipartite_stats(s.1, index.type = "networklevel",
-                                            indices = "ALLBUTDD",
+                                            indices = c("connectance",
+                                                        "weighted connectance"),
                                             prog.count = FALSE), "nl_test")
 })
 
