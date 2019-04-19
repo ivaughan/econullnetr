@@ -88,4 +88,3 @@ Gotelli, N.J. & McCabe, D.J. (2002) Species co-occurrence:
 \seealso{
 \code{\link{generate_null_net}}, \code{\link{plot_preferences}}
 }
-

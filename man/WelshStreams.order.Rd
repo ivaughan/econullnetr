@@ -27,4 +27,3 @@ The rank order of 16 prey taxa in \code{\link{WelshStreams}} on the Centre for
   with \code{\link{plot_preferences}}.
 }
 \keyword{datasets}
-

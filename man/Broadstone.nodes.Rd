@@ -21,4 +21,3 @@ Provides additional information about each macroinvertebrate taxon in the
   foodweb package \code{cheddar} (Hudson \emph{et al}. 2013).
 }
 \keyword{datasets}
-

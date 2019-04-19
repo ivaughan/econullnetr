@@ -21,4 +21,3 @@ The abundance of the 19 macroinvertebrate taxa present in the Broadstone food
   samples.
 }
 \keyword{datasets}
-

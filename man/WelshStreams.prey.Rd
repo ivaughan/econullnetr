@@ -24,4 +24,3 @@ The abundance of 16 potential macroinvertebrate prey taxa to accompany the
   food web data in \code{\link{WelshStreams}}.
 }
 \keyword{datasets}
-

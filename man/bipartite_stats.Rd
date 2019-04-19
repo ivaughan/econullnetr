@@ -143,4 +143,3 @@ Dormann, C.F., Gruber B. & Frund, J. (2008). Introducing the
   \code{\link[bipartite]{networklevel}}, \code{\link[bipartite]{grouplevel}},
   \code{\link[bipartite]{specieslevel}}
 }
-

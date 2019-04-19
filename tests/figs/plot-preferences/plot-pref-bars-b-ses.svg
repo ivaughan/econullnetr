@@ -2,7 +2,7 @@
 <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 720.00 576.00'>
 <defs>
   <style type='text/css'><![CDATA[
-    line, polyline, path, rect, circle {
+    line, polyline, polygon, path, rect, circle {
       fill: none;
       stroke: #000000;
       stroke-linecap: round;
@@ -28,7 +28,7 @@
 <line x1='59.04' y1='278.81' x2='51.84' y2='278.81' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='179.61' x2='51.84' y2='179.61' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='80.42' x2='51.84' y2='80.42' style='stroke-width: 0.75;' />
-<text transform='translate(41.76,482.53) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='10.67px' lengthAdjust='spacingAndGlyphs'>-2</text>
+<text transform='translate(41.76,482.54) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='10.67px' lengthAdjust='spacingAndGlyphs'>-2</text>
 <text transform='translate(41.76,381.34) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text transform='translate(41.76,282.14) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>2</text>
 <text transform='translate(41.76,182.95) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>4</text>
@@ -43,24 +43,24 @@
 <rect x='498.13' y='183.98' width='49.49' height='194.02' style='stroke-width: 0.75; fill: #EF8A62;' />
 <rect x='557.52' y='378.00' width='49.49' height='53.15' style='stroke-width: 0.75; fill: #F7F7F7;' />
 <rect x='616.91' y='79.20' width='49.49' height='298.80' style='stroke-width: 0.75; fill: #EF8A62;' />
-<text transform='translate(111.27,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.1</text>
+<text transform='translate(111.27,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.1</text>
 <text transform='translate(170.66,554.98) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='38.02px' lengthAdjust='spacingAndGlyphs'>Res.10</text>
-<text transform='translate(230.05,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.2</text>
-<text transform='translate(289.44,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.3</text>
-<text transform='translate(348.83,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.4</text>
-<text transform='translate(408.22,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.5</text>
-<text transform='translate(467.61,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.6</text>
-<text transform='translate(527.00,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.7</text>
-<text transform='translate(586.39,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.8</text>
-<text transform='translate(645.78,548.31) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.35px' lengthAdjust='spacingAndGlyphs'>Res.9</text>
-<text x='369.34' y='34.33' style='font-size: 14.40px; font-weight: bold; font-family: Liberation Sans;' textLength='10.11px' lengthAdjust='spacingAndGlyphs'>B</text>
+<text transform='translate(230.05,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.2</text>
+<text transform='translate(289.44,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.3</text>
+<text transform='translate(348.83,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.4</text>
+<text transform='translate(408.22,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.5</text>
+<text transform='translate(467.61,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.6</text>
+<text transform='translate(527.00,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.7</text>
+<text transform='translate(586.39,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.8</text>
+<text transform='translate(645.78,548.30) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='31.34px' lengthAdjust='spacingAndGlyphs'>Res.9</text>
+<text x='369.20' y='34.47' style='font-size: 14.40px; font-weight: bold; font-family: Liberation Sans;' textLength='10.39px' lengthAdjust='spacingAndGlyphs'>B</text>
 <line x1='59.04' y1='477.20' x2='59.04' y2='80.42' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='477.20' x2='51.84' y2='477.20' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='378.00' x2='51.84' y2='378.00' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='278.81' x2='51.84' y2='278.81' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='179.61' x2='51.84' y2='179.61' style='stroke-width: 0.75;' />
 <line x1='59.04' y1='80.42' x2='51.84' y2='80.42' style='stroke-width: 0.75;' />
-<text transform='translate(41.76,482.53) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='10.67px' lengthAdjust='spacingAndGlyphs'>-2</text>
+<text transform='translate(41.76,482.54) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='10.67px' lengthAdjust='spacingAndGlyphs'>-2</text>
 <text transform='translate(41.76,381.34) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>0</text>
 <text transform='translate(41.76,282.14) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>2</text>
 <text transform='translate(41.76,182.95) rotate(-90)' style='font-size: 12.00px; font-family: Liberation Sans;' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>4</text>

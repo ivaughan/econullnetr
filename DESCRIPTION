@@ -6,6 +6,7 @@ Depends: R (>= 2.10)
 Imports: reshape2, bipartite, gtools
 Suggests: cheddar, igraph,
     knitr,
+    readr,
     rmarkdown,
     testthat,
     vdiffr
@@ -26,5 +27,5 @@ Description: Tools for using null models to analyse ecological
     <doi.org/10.1111/2041-210X.12907>.
 License: MIT + file LICENSE
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr

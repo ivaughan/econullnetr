@@ -41,4 +41,3 @@ Part of a food web from upland streams in south Wales, UK, comprising 85
   }
 }
 \keyword{datasets}
-

@@ -28,4 +28,3 @@ A flower visitation network from an arable field site in the UK, notable for
  (2006) provide full details of the data and analysis of the results.
 }
 \keyword{datasets}
-

@@ -22,4 +22,3 @@ Floral abundance data for the five flower species recorded in the Silene flower
   visitation network (see \code{\link{Silene}}) for full details.
 }
 \keyword{datasets}
-

@@ -96,4 +96,3 @@ Brewer, C.A. (2017) \url{http://www.ColorBrewer.org}
 \seealso{
 \code{\link{generate_null_net}}
 }
-

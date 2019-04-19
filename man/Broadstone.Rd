@@ -38,4 +38,3 @@ Part of the highly-resolved macroinvertebrate food web from Broadstone Stream
   }
 }
 \keyword{datasets}
-
