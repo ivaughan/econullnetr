@@ -461,11 +461,11 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
 
   # --------------------------------------
   # Warning messages for unsupported indices
-  if (index.type == "specieslevel" & indices == "ALL") {
+  if (index.type == "specieslevel" & indices[1] == "ALL") {
     warning("Dependence matrix is not currently supported by bipartite_stats: indices = 'ALLBUTD' used instead")}
-  if (index.type == "grouplevel" & indices == "ALL") {
+  if (index.type == "grouplevel" & indices[1] == "ALL") {
     warning("Degree distribution is not currently supported by bipartite_stats: indices = 'ALLBUTDD' used instead")}
-  if (index.type == "networklevel" & indices == "ALL") {
+  if (index.type == "networklevel" & indices[1] == "ALL") {
     warning("Degree distribution is not currently supported by bipartite_stats: indices = 'ALLBUTDD' used instead")}
   # Output
   if (index.type == "networklevel") {return(net.level.results)}
