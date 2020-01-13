@@ -19,7 +19,7 @@ A range of R packages is available for network analysis and the `econullnetr` pa
 
 The null model used in `econullnetr` was developed in the context of testing for prey preferences by predators (Agusti *et al*. 2003; King *et al*. 2010; Davey *et al*. 2013). Underlying it is the hypothesis that consumers show no active preferences, such that they will 'consume' resources in proportion to the relative abundance of those resources (i.e. if Resource A is twice as abundant as Resource B, they will interact twice as often with A than B; Vaughan *et al*., 2018). By holding basic characteristics of the observed data constant in the null model (e.g. number of species and number of individuals of each species), the null model represents the network patterns that could be observed, given the limitations of the observed data, in the absence of any resource selection.  Differences from the null model at the level of individual interaction strengths, species-level metrics or network-level metrics, indicates the presence of resource selection. 
 
-This document provides a brief introduction to the `econullnetr` package, followed by three examples using data sets from the package to illustrate a range of functionality and how to combine `econullnetr` with two other network packages: `igraph` (Csardi and Nepusz 2006) and `cheddar` (Hudson *et al*., 2013). For more details of the null model, see Agusti *et al*., (2003) and Vaughan *et al*. (2018), and the individual help files for more information about the example data sets and individual functions. 
+This document provides a brief introduction to the `econullnetr` package, followed by two examples using data sets from the package to illustrate a range of functionality and how to combine `econullnetr` with the `igraph` package (Csardi and Nepusz 2006). For more details of the null model, see Agusti *et al*., (2003) and Vaughan *et al*. (2018), and the individual help files for more information about the example data sets and individual functions. 
 
 ### Basic summary of the package
 `econullnetr` comprises six functions for running null models, plotting the outputs, performing a range of statistical analyses and exporting the outputs in a form that can be imported into other network packages (Table 1). The two dedicated functions for bipartite networks (`bipartite_stats` and `plot_bipartite`) are wrappers for functions in the bipartite package (Dormann *et al*. 2008, 2009), accessing its extensive set of tools for plotting and analysing networks.
@@ -176,20 +176,22 @@ export1 <- generate_edgelist(stream.1, signif.level = 0.95,
 
 The `edge.cols` argument allows the preferred colour scheme for stronger/weaker links to be included in the data frame. A basic call to `igraph` to import the network is:
 
-```{r, results="hide"}
-library(igraph)
-```
-```{r, fig.height=6, fig.width=6}
-net.1 <- graph_from_edgelist(as.matrix(export1[, c("Resource", "Consumer")]), 
-                             directed = TRUE)
+```{r, fig.height = 6, fig.width = 6}
+if (requireNamespace("igraph", quietly = TRUE)) {
+
+net.1 <- igraph::graph_from_edgelist(as.matrix(export1[, c("Resource", 
+                                                           "Consumer")]),
+                                     directed = TRUE)
 
 # Add in the null modelling results 
-E(net.1)$obs.str <- export1$Observed
-E(net.1)$test.res <- export1$Test
-E(net.1)$edge.cols <- export1$edge.col
+igraph::E(net.1)$obs.str <- export1$Observed
+igraph::E(net.1)$test.res <- export1$Test
+igraph::E(net.1)$edge.cols <- export1$edge.col
 
-plot(net.1, layout = layout_in_circle, edge.color = E(net.1)$edge.cols, 
-     edge.width = sqrt(E(net.1)$obs.str))
+igraph::plot.igraph(net.1, layout = igraph::layout_in_circle, 
+             edge.color = igraph::E(net.1)$edge.cols, 
+             edge.width = sqrt(igraph::E(net.1)$obs.str))
+}
 ```
 
 Black links are consistent with the null model, whilst red links are stronger than expected and blue ones are weaker than expected.
@@ -199,8 +201,10 @@ With some additional commands it is possible to take greater control of the plot
 ```{r, fig.height=5, fig.width=8}
 # Create a data frame to assist with plotting
 # trph.level = a simple trophic level: primary consumers = 1, predators = 2
-n.names <- data.frame(species = V(net.1)$name, trph.level = c(1, 2, 1, 1, 1, 1, 
-                                                  1, 1, 1, 1, 1, 1, 1, 2, 1, 1)) 
+if (requireNamespace("igraph", quietly = TRUE)) {
+  n.names <- data.frame(species = igraph::V(net.1)$name, 
+                        trph.level = c(1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 
+                                       1, 2, 1, 1)) 
 
 # Calculate prey abundance across the six streams
 abund <- as.matrix(colSums(WelshStreams.prey[, 2:17]) )
@@ -217,136 +221,31 @@ n.names$short.names[2] <- "Dinocras"
 n.names$short.names[14] <- "Rhyacophila"
 
 # Create curved edges between Dinocras & Rhyacophila so that predation in both directions can be shown clearly.
-E(net.1)[13] # Confirms that edge 13 = Rhyacophila to Dinocras 
-E(net.1)[18] # Confirms that edge 18 = Dinocras to Rhyacophila
-curve.edge <- rep(0, ecount(net.1)) 
+igraph::E(net.1)[13] # Confirms that edge 13 = Rhyacophila to Dinocras 
+igraph::E(net.1)[18] # Confirms that edge 18 = Dinocras to Rhyacophila
+curve.edge <- rep(0, igraph::ecount(net.1)) 
 curve.edge[c(13, 18)] <- 0.5
-curve.arrows <- rep(0, ecount(net.1))
+curve.arrows <- rep(0, igraph::ecount(net.1))
 curve.arrows[c(13, 18)] <- 2
 
 # Create the food web plot
-plot(net.1, layout = as.matrix(n.names[, c("x.coord", "trph.level")]), 
-     vertex.shape = "rectangle", vertex.size = log(n.names$Abundance),
-     vertex.size2 = 20, edge.curved = curve.edge, edge.arrow.mode = curve.arrows,
-     edge.color = E(net.1)$edge.cols, edge.width = sqrt(E(net.1)$obs.str),
-     vertex.color = "#000000", vertex.label = n.names$short.names,
-     vertex.label.degree = n.names$lab.deg, vertex.label.family = "",
-     vertex.label.dist = rep(3, 16), vertex.label.cex = 0.75, asp = .4)
+igraph::plot.igraph(net.1, layout = as.matrix(n.names[, c("x.coord", 
+                                                          "trph.level")]),
+             vertex.shape = "rectangle", 
+             vertex.size = log(n.names$Abundance),
+             vertex.size2 = 20, edge.curved = curve.edge, 
+             edge.arrow.mode = curve.arrows, 
+             edge.color = igraph::E(net.1)$edge.cols,
+             edge.width = sqrt(igraph::E(net.1)$obs.str), 
+             vertex.color = "#000000", 
+             vertex.label = n.names$short.names, 
+             vertex.label.degree = n.names$lab.deg, vertex.label.family = "",
+             vertex.label.dist = rep(3, 16), vertex.label.cex = 0.75, 
+             asp = .4)
+}
 ```
 
 This highlights prey favoured by both predators (e.g. *Baetis*, Simuliidae), avoided (e.g. *Rhithrogena*) and the asymmetry in the intra-guild predation.
-
-
-### Example 3. Analysis and plotting of a food web using the `cheddar` package for calculating network statistics and plotting
-
-The Broadstone Stream data represent a highly resolved freshwater food web, requiring different tools to be used with `econullnetr` to calculate network metrics and for plotting the network. This example uses some of the functions from the `cheddar` package (Hudson *et al*., 2013) to help to identify dietary specialisation amongst predatory species and plot prey preferences on the network. This is done by calculating the generality (Bersier *et al*. 2002) of the seven predator taxa's diets using cheddar's `NodeQuantitativeDescriptors` function, and comparing it to the generality estimated under the null model to indicate whether diets were more or less general than expected based on the distribution of resource abundances.
-
-The Broadstone web is well studied, giving a good idea of the breadth of possible – and forbidden – trophic interactions, allowing more realistic food webs to be modelled. To approximate the forbidden links, the data frame `Broadstone.fl` uses the complete set of interactions observed across a complete year's sampling of the web (see Woodward *et al*., 2005 for details). The `BS.nodes` data frame provides two additional variables for use with `cheddar`: the mean size of an individual of each taxon (taken from `BroadstoneStream` in `cheddar`) and the abundance of each taxon in the kick sample data. The first steps are to read in the data and run the null model, after which it is straightforward to create a Community object in `cheddar` from a `econullnetr` edgelist: 
-
-```{r, results="hide"}
-# The Broadstone data comprise counts of different prey taxa in each individual predator's gut; hence data.type = "counts"
-set.seed(1234)
-bs.null <- generate_null_net(Broadstone, Broadstone.prey, sims = 100, 
-                             data.type = "counts", summary.type = "sum", 
-                             r.weights = Broadstone.fl)
-
-library(cheddar)
-# Create a list of properties, used for creating a cheddar 'Community' object
-BS.props <- list(title = "Broadstone, August", M.units = "mg", N.units = "counts")
-BS.links <- generate_edgelist(bs.null, signif.level = 0.95, 
-                              edge.cols = c("#2c7bb6", "#000000", "#d7191c"))
-colnames(BS.links)[1:2] <- c("consumer", "resource") # Change to lower case to match cheddar
-BS <- Community(nodes = Broadstone.nodes, properties = BS.props, 
-                trophic.links = BS.links)
-```
-
-Several plotting options are available at this stage, including a traditional food web plot and plot of the food web matrix. In both cases, red and blue indicate links that are stronger or weaker respectively than expected under the null model. In the first plot, link thickness represents the observed number of prey eaten:
-
-```{r, fig.height=5, fig.width=7}
-# Traditional multi-level food web plot
-PlotWebByLevel(BS, link.colour.by = "Test", link.colour.spec = c(Stronger = 
-               "#d7191c", ns = "#cccccc", Weaker = "#2c7bb6"), link.lwd = 
-               log(TLPS(BS)$Observed), pch = 16, cex = 3, col = "black", 
-               highlight.nodes = NULL, show.nodes.as = "both", label.cex = 1, 
-               label.colour = "white")
-legend("topright", legend = c("Stronger", "ns", "Weaker"), lty = 1, lwd = 2, 
-        col = c("#d7191c", "#cccccc", "#2c7bb6"))
-```
-
-```{r, fig.height=5, fig.width=5}
-# Alternative representation, plotting the predation matrix
-PlotPredationMatrix(BS, resource.order = "M", consumer.order = "M", pch = 15, 
-                    cex = 2, colour.by = "Test", main = NULL, ylab = "",
-                    colour.spec = c(Stronger = "#d7191c", ns = "#cccccc", 
-                    Weaker = "#2c7bb6"))
-axis(2, at = seq(1, 19), labels = strtrim(NPS(BS)$node[order(NPS(BS)$M, 
-     decreasing = TRUE)], 6), las = 1)
-axis(3, at = seq(1, 19), labels = strtrim(NPS(BS)$node[order(NPS(BS)$M)], 6),
-     las = 3)
-```
-
-A simple workflow can be created to combine `econullnetr` and `cheddar` to test for significant differences in network statistics between the observed and modelled networks:
-
-```{r}
-library(reshape2)
-for (i in 1:bs.null$n.iterations) { # Number of null model iterations
-  net.data <- bs.null$rand.data[bs.null$rand.data$Iteration == paste("It.", 
-                               i, sep = ""), -1]
-  net.data <- melt(net.data, id.vars = "Consumer")
-  colnames(net.data) <- c("consumer", "resource", "Freq")
-  BS.rand <- Community(nodes = Broadstone.nodes, properties = BS.props, 
-                       trophic.links = net.data)
-  BS.gen <- data.frame(NodeQuantitativeDescriptors(BS.rand, "Freq"))$g
-  ifelse(i == 1, Gen <- BS.gen, Gen <- cbind(Gen, BS.gen))
-}
-
-# Calculate the percentiles for the 95% confidence interval and calculate 
-#   test results. ‘Higher’, ‘Lower’, not significant ‘ns’ or not applicable 
-#   due to being a primary consumer(‘P.cons’)
-
-gen.cl <- apply(Gen, 1, quantile, probs = c(.025, .975))
-gen.summary <- data.frame(obs = data.frame(NodeQuantitativeDescriptors(BS, 
-                          "Observed"))$g, gen.2.5 = t(gen.cl)[, 1], 
-                          gen.97.5 = t(gen.cl)[, 2])
-
-gen.tests <- rep("ns", 19)
-for (i in 1:19) {
-  if(max(gen.summary[i, ]) == 0) gen.tests[i] <- "P.cons" 
-  if(gen.summary$obs[i] > gen.summary$gen.97.5[i]) gen.tests[i] <- "Higher"
-  if(gen.summary$obs[i] < gen.summary$gen.2.5[i]) gen.tests[i] <- "Lower"
-}
-```
-
-It is then straightforward to plot the food web, using different symbols for primary consumers and predators, and colour coding the predator species according to whether their diets are more general than expected under the null model (red), more specialised (blue) or consistent with the null model (black):
-
-```{r, fig.height=5, fig.width=7}
-PlotWebByLevel(BS, link.colour.by = "Test", link.colour.spec = c(Stronger = 
-               "#d7191c", ns = "#cccccc", Weaker = "#2c7bb6"), link.lwd = 
-               log(TLPS(BS)$Observed), symbol.by = gen.tests, symbol.spec = 
-               c(Higher = 15, P.cons = 16, ns = 15, Lower = 15), cex = 3, 
-               colour.by = gen.tests, colour.spec = c(Higher = "#d7191c", 
-               P.cons = "#636363", ns = "#000000", Lower = "#2c7bb6"), 
-               highlight.nodes = NULL, main = "Generality", show.nodes.as = "both",
-               label.cex = 1, label.colour = "white")
-legend("topright", legend = c("1", "10", "100"), lty = 1, 
-       lwd = c(log(1), log(10), log(100)), col = 1, title = "Number eaten")
-```
-
-In a final stage, preference plots reveal the apparent prey preferences that contribute to more specialised (*Trissopelopia*; node 12) or less specialised *Cordulegaster* (node 4) diets than expected. Prey taxa are plotted in order of increasing size on the y-axis (smallest taxon at the bottom):
-
-```{r, fig.height=5, fig.width=8}
-par(mfrow = c(1, 2))
-plot_preferences(bs.null, "Trissopelopia", signif.level = 0.95, type = "counts", 
-                 xlab = "Number of visits", p.cex = 1.5, l.cex = 0.9, lwd = 2,
-                 res.order =  data.frame(Broadstone.nodes$node, 
-                                         Broadstone.nodes$M))
-plot_preferences(bs.null, "Cordulegaster", signif.level = 0.95, type = "counts",
-                 xlab = "Number of visits", p.cex = 1.5, l.cex = 0.9, lwd = 2,
-                 res.order = data.frame(Broadstone.nodes$node, 
-                                        Broadstone.nodes$M))
-```
-
-*Trissopelopia*, a small chironomid midge is one of the smallest predators in the web, and showed strong preference for *Heterotrissocladius*, another small chironomid that occupies similar interstitial microhabitats. Most of the remaining taxa were consumed at rates consistent with the null model or eaten less often than expected (e.g. *Zavrelimyia*). *Cordulegaster*, by contrast, was the largest invertebrate predator in the web, limiting its access into small interstitial spaces in the stream bed. In addition, it has mouthparts that allow it to take large prey. It tended to consume smaller, abundant, interstitial taxa less often than expected and larger, less abundant taxa more often than expected, leading to its more general diet than predicted by the model.
 
 
 ### References
@@ -363,8 +262,6 @@ Dormann, C.F., Fründ, J., Bluthgen, N. & Gruber, B. (2009). Indices, graphs and
 Gotelli, N.J. & McCabe, D.J. (2002) Species co-occurrence: a meta-analysis of J. M. Diamond’s assembly rules model. *Ecology*, **83**, 2091-2096.
 
 Gotelli, N.J. & Ulrich, W. (2010) The empirical Bayes approach as a tool to identify non-random species associations. *Oecologia*, **162**, 463-477.
-
-Hudson, L.N., Emerson, R., Jenkins, G.B., Layer, K., Ledger, M.E., Pichler, D.E., Thompson, M.S.A., O’Gorman, E.J., Woodward, G & Reuman, D.C. (2013) Cheddar: analysis and visualisation of ecological communities in R. *Methods in Ecology and Evolution*, **4**, 99–104.
 
 Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral intensification on the feeding interactions of generalist predators in streams. *Molecular Ecology*, **27**, 590-602.
 

@@ -4,10 +4,18 @@
 \alias{generate_null_net}
 \title{Null models for ecological networks}
 \usage{
-generate_null_net(consumers, resources, sims = 100,
-  data.type = "names", maintain.d = NULL, summary.type = "sum",
-  c.samples = NULL, r.samples = NULL, r.weights = NULL,
-  prog.count = TRUE)
+generate_null_net(
+  consumers,
+  resources,
+  sims = 100,
+  data.type = "names",
+  maintain.d = NULL,
+  summary.type = "sum",
+  c.samples = NULL,
+  r.samples = NULL,
+  r.weights = NULL,
+  prog.count = TRUE
+)
 }
 \arguments{
 \item{consumers}{A matrix or data frame containing the interaction data. The

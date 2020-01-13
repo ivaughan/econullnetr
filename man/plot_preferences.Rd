@@ -4,9 +4,18 @@
 \alias{plot_preferences}
 \title{Plot the resource preferences of a consumer}
 \usage{
-plot_preferences(nullnet, node, signif.level = 0.95, style = "dots",
-  type = "counts", res.col = c("#67A9CF", "#F7F7F7", "#EF8A62"),
-  res.order = NULL, l.cex = 1, p.cex = 1, ...)
+plot_preferences(
+  nullnet,
+  node,
+  signif.level = 0.95,
+  style = "dots",
+  type = "counts",
+  res.col = c("#67A9CF", "#F7F7F7", "#EF8A62"),
+  res.order = NULL,
+  l.cex = 1,
+  p.cex = 1,
+  ...
+)
 }
 \arguments{
 \item{nullnet}{An object of class nullnet from \code{generate_null_net}}

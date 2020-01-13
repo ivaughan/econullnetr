@@ -5,8 +5,12 @@
 \title{Plot a bipartite network, colour coding individual links according to
   whether they are stronger or weaker than expected under the null model}
 \usage{
-plot_bipartite(nullnet, signif.level = 0.95, edge.cols = c("#67A9CF",
-  "#F7F7F7", "#EF8A62"), ...)
+plot_bipartite(
+  nullnet,
+  signif.level = 0.95,
+  edge.cols = c("#67A9CF", "#F7F7F7", "#EF8A62"),
+  ...
+)
 }
 \arguments{
 \item{nullnet}{An object of class "nullnet" from \code{generate_null_net}}

@@ -45,11 +45,6 @@
 #'   Csardi, G. & Nepusz, T. (2006) The igraph software package for complex
 #'   network research. \emph{InterJournal, Complex Systems}, \strong{1695}.
 #'
-#'   Hudson, L.N., Emerson, R., Jenkins, G.B., Layer, K., Ledger, M.E., Pichler,
-#'   D.E., Thompson, M.S.A., O'Gorman, E.J., Woodward, G & Reuman, D.C. (2013)
-#'   Cheddar: analysis and visualisation of ecological communities in R.
-#'   \emph{Methods in Ecology and Evolution}, \strong{4}, 99--104.
-#'
 #'   Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E., Woodward, G. &
 #'   Symondson, W.O.C. (2018) econullnetr: an R package using null models to
 #'   analyse the structure of ecological networks and identify resource
@@ -57,28 +52,27 @@
 #'
 #' @examples
 #' set.seed(1234)
-#' bs.null <- generate_null_net(Broadstone, Broadstone.prey, data.type = "counts",
-#'                              sims = 10, r.weights = Broadstone.fl)
-#' BS.export <- generate_edgelist(bs.null, signif.level = 0.95)
+#' bs.null <- generate_null_net(Broadstone, Broadstone.prey,
+#'                              data.type = "counts", sims = 10,
+#'                              r.weights = Broadstone.fl)
+#' BS.export <- generate_edgelist(bs.null, signif.level = 0.95,
+#'                                edge.cols = c("#67A9CF", "black", "#EF8A62"))
 #'
-#' # Plot network with functions from the cheddar package
-#' library(cheddar)
-#' BS.comm <- list(title = "Broadstone, August", M.units = "mg",
-#'                 N.units = "counts")
+#' if (requireNamespace("igraph", quietly = TRUE)) {
+#'  net.1 <- igraph::graph_from_edgelist(as.matrix(BS.export[, c("Resource",
+#'                                                               "Consumer")]),
+#'                                       directed = TRUE)
 #'
-#' # Change to lower case to match cheddar convention, then create an object
-#' #  of class 'community'
-#' colnames(BS.export)[1:2] <- c("consumer", "resource")
-#' BS <- Community(nodes = Broadstone.nodes, properties = BS.comm,
-#'                 trophic.links = BS.export)
+#'  # Add in the null modelling results
+#'  igraph::E(net.1)$obs.str <- BS.export$Observed
+#'  igraph::E(net.1)$test.res <- BS.export$Test
+#'  igraph::E(net.1)$edge.cols <- BS.export$edge.col
 #'
-#' PlotWebByLevel(BS, link.colour.by = "Test", link.colour.spec = c(Stronger =
-#'                "#d7191c", ns = "#cccccc", Weaker = "#2c7bb6"),
-#'                link.lwd = log(TLPS(BS)$Observed), pch = 16, cex = 3,
-#'                col = "black", highlight.nodes = NULL,
-#'                show.nodes.as = "both", label.cex = 1, label.colour = "white")
-#' legend("topright", legend = c("Stronger", "ns", "Weaker"), lty = 1, lwd = 2,
-#'        col = c("#d7191c", "#cccccc", "#2c7bb6"))
+#'  igraph::plot.igraph(net.1, layout = igraph::layout_in_circle,
+#'                      edge.color = igraph::E(net.1)$edge.cols,
+#'                      edge.width = sqrt(igraph::E(net.1)$obs.str),
+#'                      edge.arrow.size = .4)
+#'}
 #'
 #' @export
 

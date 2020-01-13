@@ -235,7 +235,7 @@ generate_null_net <- function(consumers, resources, sims = 100,
     spp.consumed <- spp.consumed[order(spp.consumed$Group.1, decreasing = FALSE), ]
     all.res <- cbind(r.samples, resources)
     all.res <- all.res[order(all.res$r.samples, decreasing = FALSE), ]
-    if(sum(spp.consumed[, -1] >0 && all.res[, -1] == 0) > 0) {warning(
+    if(sum(spp.consumed[, -1] > 0 & all.res[, -1] == 0) > 0) {warning(
       "One or more instances detected where a consumer interacted with a
        resource that has zero abundance in 'resources'")}
   } else {
@@ -247,10 +247,10 @@ generate_null_net <- function(consumers, resources, sims = 100,
   }
 
   # 6. Correct types of data for data.type = "names" and "counts"
-  if(data.type == "names" && {sum(consumers[, -1] == 1 | consumers[, -1] == 0) !=
+  if(data.type == "names" & {sum(consumers[, -1] == 1 | consumers[, -1] == 0) !=
      (nrow(consumers) * ncol(consumers[, -1]))}) {
      stop("Entries in the consumer data should equal 0 or 1")}
-  if(data.type == "counts" && {sum(consumers[, -1] - round(consumers[, -1], 0)) > 0}) {
+  if(data.type == "counts" & {sum(consumers[, -1] - round(consumers[, -1], 0)) > 0}) {
      stop("Entries in the consumer data should be integers")}
   # --------------------------------------
 

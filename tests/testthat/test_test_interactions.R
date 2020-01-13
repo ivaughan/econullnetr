@@ -54,6 +54,6 @@ test_that("Correct handling of zero values and forbidden links", {
                                             r.weights = fbls.1,
                                             prog.count = FALSE))
   expect_equal(sum(t1[t1$Resource == "Res.3", "Observed"]), 0)
-  expect_equal(sum(is.na(t2[t2$Resource == "Res.1" || t2$Resource == "Res.3",
+  expect_equal(sum(is.na(t2[t2$Resource == "Res.1" | t2$Resource == "Res.3",
                             "SES"])), 4)
 })

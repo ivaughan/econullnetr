@@ -5,8 +5,14 @@
 \title{Test for significant differences in a range of network metrics between the
   observed and null bipartite networks}
 \usage{
-bipartite_stats(nullnet, signif.level = 0.95, index.type, indices,
-  prog.count = TRUE, ...)
+bipartite_stats(
+  nullnet,
+  signif.level = 0.95,
+  index.type,
+  indices,
+  prog.count = TRUE,
+  ...
+)
 }
 \arguments{
 \item{nullnet}{An object of class 'nullnet' from \code{generate_null_net}}

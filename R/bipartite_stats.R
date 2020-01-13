@@ -204,7 +204,7 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
     for (i in 1:nrow(net.level.results)) {
       if (is.na(net.level.results$Observed[i]))
          {net.level.results$Test[i] <- "NA"} else {
-      if ((net.level.results$Observed[i] == net.level.results$Lower.CL[i]) &&
+      if ((net.level.results$Observed[i] == net.level.results$Lower.CL[i]) &
          (net.level.results$Observed[i] == net.level.results$Upper.CL[i]))
          {net.level.results$Test[i] <- "NA"}
       if (net.level.results$Observed[i] > net.level.results$Upper.CL[i])
@@ -263,7 +263,7 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
     for (i in 1:nrow(grp.level.results)) {
       if (is.na(grp.level.results$Observed[i]))
          {grp.level.results$Test[i] <- "NA"} else {
-      if ((grp.level.results$Observed[i] == grp.level.results$Lower.CL[i]) &&
+      if ((grp.level.results$Observed[i] == grp.level.results$Lower.CL[i]) &
          (grp.level.results$Observed[i] == grp.level.results$Upper.CL[i]))
          {grp.level.results$Test[i] <- "NA"}
       if (grp.level.results$Observed[i] > grp.level.results$Upper.CL[i])
@@ -425,7 +425,7 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
       mat1$Test <- as.character(mat1$Test)
       for (k in 1:nrow(mat1)) {
         if (is.na(mat1$Observed[k])) {mat1$Test[k] <- "NA"} else {
-          if ((mat1$Observed[k] == mat1$Lower.CL[k]) &&
+          if ((mat1$Observed[k] == mat1$Lower.CL[k]) &
              (mat1$Observed[k] == mat1$Upper.CL[k])) {mat1$Test[k] <- "NA"}
           if (mat1$Observed[k] > mat1$Upper.CL[k]) {mat1$Test[k] <- "Higher"}
           if (mat1$Observed[k] < mat1$Lower.CL[k]) {mat1$Test[k] <- "Lower"}
@@ -448,7 +448,7 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
       mat1$Test <- as.character(mat1$Test)
       for (k in 1:nrow(mat1)) {
         if (is.na(mat1$Observed[k]) || is.na(mat1$Lower.CL[k])) {mat1$Test[k] <- "NA"} else {
-          if ((mat1$Observed[k] == mat1$Lower.CL[k]) &&
+          if ((mat1$Observed[k] == mat1$Lower.CL[k]) &
               (mat1$Observed[k] == mat1$Upper.CL[k])) {mat1$Test[k] <- "ns"}
           if (mat1$Observed[k] > mat1$Upper.CL[k]) {mat1$Test[k] <- "Higher"}
           if (mat1$Observed[k] < mat1$Lower.CL[k]) {mat1$Test[k] <- "Lower"}
@@ -461,11 +461,11 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
 
   # --------------------------------------
   # Warning messages for unsupported indices
-  if (index.type == "specieslevel" && indices == "ALL") {
+  if (index.type == "specieslevel" & indices == "ALL") {
     warning("Dependence matrix is not currently supported by bipartite_stats: indices = 'ALLBUTD' used instead")}
-  if (index.type == "grouplevel" && indices == "ALL") {
+  if (index.type == "grouplevel" & indices == "ALL") {
     warning("Degree distribution is not currently supported by bipartite_stats: indices = 'ALLBUTDD' used instead")}
-  if (index.type == "networklevel" && indices == "ALL") {
+  if (index.type == "networklevel" & indices == "ALL") {
     warning("Degree distribution is not currently supported by bipartite_stats: indices = 'ALLBUTDD' used instead")}
   # Output
   if (index.type == "networklevel") {return(net.level.results)}

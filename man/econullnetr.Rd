@@ -3,7 +3,6 @@
 \docType{package}
 \name{econullnetr}
 \alias{econullnetr}
-\alias{econullnetr-package}
 \title{econullnetr: tools for using null models to analyse the structure of ecological
   networks and identify resource selection}
 \description{

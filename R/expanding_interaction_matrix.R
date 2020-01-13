@@ -79,15 +79,20 @@ expand_matrix <- function(X, r.names = rownames(X), MARGIN = 1) {
     imat <- data.frame(Consumer = r.names, X)
   })
 
-  # Convert to long format, replicate rows by the number of
+
+  # Convert to long format, replicate rows by the number
   imat <- reshape2::melt(imat, id.vars = "Consumer")
   imat <- imat[rep(1:nrow(imat), imat[, 3]), -3]
-  imat <- data.frame(Consumer = imat$Consumer,
-                     stats::model.matrix(~ 0 + variable, imat),
-                     row.names = NULL)
-  colnames(imat) <- gsub("variable", "", colnames(imat))
+  imat$ID.code <- seq(1, nrow(imat))
+  imat$count <- 1
+  #imat <- reshape2::dcast(imat, Consumer + ID.code ~ variable,
+  #                        fun.aggregate = length, fill = 0)
+  imat <- reshape2::dcast(imat, Consumer + ID.code ~ variable,
+                          value.var = "count",
+                          fun.aggregate = length, fill = 0)
+  imat$ID.code <- NULL
+
+
   return(imat)
 }
-
-
 
