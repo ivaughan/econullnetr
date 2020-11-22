@@ -4,12 +4,14 @@
 \name{Silene}
 \alias{Silene}
 \title{Flower visitation network from an arable field in the UK}
-\format{A data frame with 128 rows and seven columns, one row for each individual
+\format{
+A data frame with 128 rows and seven columns, one row for each individual
   pollinator. The first column (\code{Visit}) represents the sampling occasion
   on which the pollinator was collected (V1--V11), the second column
   (\code{Insect}) represents the flower visitor taxon, and the remaining five
   columns are the five flower species, which were either visited (1) or not (0)
-  by each insect.}
+  by each insect.
+}
 \source{
 Gibson, R.H., Nelson, I.L., Hopkins, G.W., Hamlett, B.J. &
   Memmott, J. (2006) Pollinator webs, plant communities and the conservation

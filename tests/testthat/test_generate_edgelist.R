@@ -21,16 +21,16 @@ test_that("Basic error warnings",{
 #  levels, an alternative colour scheme and forcing interactions that were not
 #  observed to be included in the output.
 test_that("Consistent outputs", {
-  expect_equal_to_reference(generate_edgelist(s.1, signif.level = 0.9),
+  expect_known_value(generate_edgelist(s.1, signif.level = 0.9),
                             "el1_090")
-  expect_equal_to_reference(generate_edgelist(s.1, signif.level = 0.95),
+  expect_known_value(generate_edgelist(s.1, signif.level = 0.95),
                             "el1_095")
-  expect_equal_to_reference(generate_edgelist(s.1, signif.level = 0.99),
+  expect_known_value(generate_edgelist(s.1, signif.level = 0.99),
                             "el1_099")
-  expect_equal_to_reference(generate_edgelist(s.1, signif.level = 0.95,
+  expect_known_value(generate_edgelist(s.1, signif.level = 0.95,
                             edge.cols = c("#E9A3C9", "#F7F7F7", "#A1D76A")),
                             "el2_095")
-  expect_equal_to_reference(generate_edgelist(s.1, signif.level = 0.95,
+  expect_known_value(generate_edgelist(s.1, signif.level = 0.95,
                             export.null = TRUE), "el3_95")
 
 })

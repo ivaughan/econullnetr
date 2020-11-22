@@ -4,11 +4,13 @@
 \name{Broadstone}
 \alias{Broadstone}
 \title{Part of the highly-resolved food web from Broadstone Stream, UK}
-\format{A data frame with 319 rows and 20 columns. Each row represents the gut
+\format{
+A data frame with 319 rows and 20 columns. Each row represents the gut
   contents of an individual predator. There are 20 columns in total, with the
   first column (\code{Predator}) indicating the predator taxon (seven taxa in
   total) and the remaining 19 columns indicating the number of individuals eaten
-  of each of the 19 potential prey taxa.}
+  of each of the 19 potential prey taxa.
+}
 \source{
 Woodward, G., Speirs, D.C. & Hildrew, A.G. (2005) Quantification and
 resolution of a complex, size-structured food web. \emph{Advances in

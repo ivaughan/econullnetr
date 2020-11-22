@@ -1,7 +1,7 @@
 Package: econullnetr
 Type: Package
 Title: Null Model Analysis for Ecological Networks
-Version: 0.2.0
+Version: 0.2.1
 Depends: R (>= 2.10)
 Imports: reshape2, bipartite, gtools
 Suggests: igraph,
@@ -27,5 +27,5 @@ Description: Tools for using null models to analyse ecological
     <doi.org/10.1111/2041-210X.12907>.
 License: MIT + file LICENSE
 LazyData: TRUE
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 VignetteBuilder: knitr

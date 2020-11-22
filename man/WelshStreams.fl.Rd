@@ -4,10 +4,12 @@
 \name{WelshStreams.fl}
 \alias{WelshStreams.fl}
 \title{'Forbidden' links to accompany the upland streams food web}
-\format{A data frame with 2 rows and 17 columns, each row representing one of the
+\format{
+A data frame with 2 rows and 17 columns, each row representing one of the
   two predator genera. The first column (\code{Predator}) indicates the predator
   genus, whilst columns 2--17 indicate which of the 16 potential prey taxa can be
-    consumed (1) or are forbidden (0).}
+    consumed (1) or are forbidden (0).
+}
 \source{
 Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral

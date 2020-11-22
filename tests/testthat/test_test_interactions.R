@@ -38,9 +38,9 @@ test_that("Type I error warning", {
 # Check the table and test results
 test_that("Correct outputs", {
   skip_on_cran()
-  expect_equal_to_reference(test_interactions(s.1, 0.9), "ti1_090")
-  expect_equal_to_reference(test_interactions(s.1, 0.95), "ti1_095")
-  expect_equal_to_reference(test_interactions(s.1, 0.99), "ti1_099")
+  expect_known_value(test_interactions(s.1, 0.9), "ti1_090")
+  expect_known_value(test_interactions(s.1, 0.95), "ti1_095")
+  expect_known_value(test_interactions(s.1, 0.99), "ti1_099")
 })
 
 

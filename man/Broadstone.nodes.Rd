@@ -4,14 +4,16 @@
 \name{Broadstone.nodes}
 \alias{Broadstone.nodes}
 \title{Abundance and body mass data to accompany the \code{Broadstone} data set}
-\format{A data frame with three columns and 19 rows:
+\format{
+A data frame with three columns and 19 rows:
   \describe{
     \item{node}{The name of the macroinvertebrate taxon (node) in the network}
     \item{M}{The mean body mass of an individual of the taxon, from
       \code{cheddar}'s \code{BroadstoneStream} object}
     \item{N}{The total abundance of each taxon from the 30 Surber samples (see
       \code{\link{Broadstone.prey}} for details)}
-  }}
+  }
+}
 \usage{
 Broadstone.nodes
 }

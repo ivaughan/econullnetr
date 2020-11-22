@@ -4,11 +4,13 @@
 \name{Broadstone.fl}
 \alias{Broadstone.fl}
 \title{'Forbidden' links to accompany the \code{Broadstone} data set}
-\format{A data frame with 20 columns and seven rows, one row for each of the
+\format{
+A data frame with 20 columns and seven rows, one row for each of the
   seven predator taxa.  The first column (\code{Predator}) lists the seven taxa,
   whilst the remaining 19 columns are the invertebrate taxa in the food web:
   each element indicates whether the predator can consume that taxon (1) or
-  whether the link is 'forbidden' (0).}
+  whether the link is 'forbidden' (0).
+}
 \source{
 Woodward, G., Speirs, D.C. & Hildrew, A.G. (2005) Quantification and
   resolution of a complex, size-structured food web. \emph{Advances in

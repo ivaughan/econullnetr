@@ -4,12 +4,14 @@
 \name{WelshStreams.order}
 \alias{WelshStreams.order}
 \title{Additional data to assist with plotting outputs from \code{\link{WelshStreams}}}
-\format{A data frame with 16 rows and two columns:
+\format{
+A data frame with 16 rows and two columns:
 \describe{
   \item{Taxon}{The names of each prey taxon}
   \item{CEH}{The rank order of the taxa based on the Centre for Ecology and
     Hydrology's Coded Macroinvertebrate List}
- }}
+ }
+}
 \source{
 Pearson, C.E., Symondson, W.O.C., Clare, E.L., Ormerod, S.J.,
  Iparraguirre Bolanos, E. & Vaughan, I.P. (2018) The effects of pastoral

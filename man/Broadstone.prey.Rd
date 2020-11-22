@@ -4,8 +4,10 @@
 \name{Broadstone.prey}
 \alias{Broadstone.prey}
 \title{Macroinvertebrate abundance data to accompany the \code{Broadstone} data frame}
-\format{A data frame with 19 columns and one row, with each column name
-  representing one taxon. Names match those in \code{Broadstone}.}
+\format{
+A data frame with 19 columns and one row, with each column name
+  representing one taxon. Names match those in \code{Broadstone}.
+}
 \source{
 Woodward, G., Speirs, D.C. & Hildrew, A.G. (2005) Quantification and
   resolution of a complex, size-structured food web. \emph{Advances in
