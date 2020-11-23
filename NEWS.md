@@ -1,3 +1,6 @@
+# econullnetr 0.2.1
+* Updates unit tests to reflect new version of testthat package
+
 # econullnetr 0.2.0
 * Adds the expand_matrix function
 * Removes examples using the cheddar package (not currently available on CRAN)
