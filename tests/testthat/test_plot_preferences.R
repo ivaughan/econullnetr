@@ -27,6 +27,7 @@ test_that("Basic error warnings",{
 
 test_that("Check appearance of plot",{
   skip_on_cran()
+  skip_on_travis()
   pl1 <- function() plot_preferences(s.1, node = "A", signif.level = 0.95,
                                      style = "dots", type = "counts")
   pl2 <- function() plot_preferences(s.1, node = "B", signif.level = 0.95,

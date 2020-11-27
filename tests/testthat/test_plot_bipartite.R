@@ -27,6 +27,7 @@ test_that("Basic error warnings",{
 #  and using many of the optional arguments to 'plotweb' to test compatibility
 test_that("Bipartite plotting", {
   skip_on_cran()
+  skip_on_travis()
   pl1 <- function() plot_bipartite(s.1, signif.level = 0.9)
   pl2 <- function() plot_bipartite(s.1, signif.level = 0.95)
   pl3 <- function() plot_bipartite(s.1, signif.level = 0.99)
@@ -49,6 +50,7 @@ vdiffr::expect_doppelganger("Plot bipartite v3 0.95", pl5)
 
 test_that("Correct handling of zero values",{
   skip_on_cran()
+  skip_on_travis()
   # c.1 = one column in consumer data = 0; c.2 = one consumer sp has no
   #  interactions recorded; r.2 = r.1, but with res.7 set to 0, creating a
   #  'double zero' (abundance = 0 and no interactions, but recorded in both
