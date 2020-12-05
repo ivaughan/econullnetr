@@ -53,7 +53,7 @@
 #'
 #' @seealso \code{\link{generate_null_net}}, \code{\link{plot_bipartite}}
 #'
-#' @references Brewer, C.A. (2017) \url{http://www.ColorBrewer.org}
+#' @references Brewer, C.A. (2017) \url{http://www.colorbrewer2.org/}
 #'
 #'   Davey, J.S., Vaughan, I.P., King, R.A., Bell, J.R., Bohan, D.A., Bruford,
 #'   M.W., Holland, J.M. & Symondson, W.O.C. (2013) Intraguild predation in

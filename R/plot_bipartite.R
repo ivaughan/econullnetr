@@ -25,7 +25,7 @@
 #' @seealso \code{\link{generate_null_net}}, \code{\link{bipartite_stats}},
 #'   \code{\link[bipartite]{plotweb}}
 #'
-#' @references Brewer, C.A. (2017) \url{http://www.ColorBrewer.org}
+#' @references Brewer, C.A. (2017) \url{http://www.colorbrewer2.org/}
 #'
 #'   Dormann, C.F., Gruber B. & Frund, J. (2008). Introducing the bipartite
 #'   package: analysing ecological networks. \emph{R news}, \strong{8}, 8-11.
