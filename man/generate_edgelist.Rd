@@ -81,7 +81,7 @@ if (requireNamespace("igraph", quietly = TRUE)) {
 
 }
 \references{
-Brewer, C.A. (2017) \url{http://www.ColorBrewer.org}
+Brewer, C.A. (2017) \url{http://www.colorbrewer2.org/}
 
   Csardi, G. & Nepusz, T. (2006) The igraph software package for complex
   network research. \emph{InterJournal, Complex Systems}, \strong{1695}.
