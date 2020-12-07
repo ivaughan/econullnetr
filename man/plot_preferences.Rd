@@ -102,7 +102,7 @@ plot_preferences(null.1, "Rhyacophila", signif.level = 0.95, style = "bars",
 
 }
 \references{
-Brewer, C.A. (2017) \url{http://www.colorbrewer2.org/}
+Brewer, C.A. (2017) \url{https://colorbrewer2.org/}
 
   Davey, J.S., Vaughan, I.P., King, R.A., Bell, J.R., Bohan, D.A., Bruford,
   M.W., Holland, J.M. & Symondson, W.O.C. (2013) Intraguild predation in
