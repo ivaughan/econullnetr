@@ -13,3 +13,5 @@ matrix:
     - os: osx
       r: release
 
+r_binary_packages:
+    - libgit2
