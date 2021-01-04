@@ -1,3 +1,6 @@
+## Resubmission
+This is a resubmission. 
+* Updated URLs in man/generate_edgelist.Rd, man/plot_bipartite.Rd and man/plot_preferences.Rd.
 
 ## Test environments
 * local Windows 10, R 4.0.3
