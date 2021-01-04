@@ -3,9 +3,16 @@
 language: r
 warnings_are_errors: true
 
-r:
-  - release
-  - devel
+matrix:
+  include:
+    - os: linux
+      r: release
+    - os: linux
+      r: devel
+    - os: osx
+      r: release
 
-r_github_packages:
-  - libgit2/libgit2
+addons:
+  apt:
+    packages:
+      - libgit2-dev
