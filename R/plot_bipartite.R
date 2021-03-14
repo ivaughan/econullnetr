@@ -22,6 +22,8 @@
 #'   to customise the network plot beyond the colour coding of the links. See
 #'   the appropriate help file in the bipartite package for details.
 #'
+#' @return No return value, called for side effects.
+#'
 #' @seealso \code{\link{generate_null_net}}, \code{\link{bipartite_stats}},
 #'   \code{\link[bipartite]{plotweb}}
 #'

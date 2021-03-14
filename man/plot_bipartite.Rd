@@ -28,6 +28,9 @@ colour scheme (Brewer 2017).}
 \item{...}{Other arguments to be supplied to \code{bipartite}'s
 \code{plotweb} function.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Acts as a wrapper for the \code{bipartite} package's
   \code{\link[bipartite]{plotweb}} function (Dormann \emph{et al}., 2008),

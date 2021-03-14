@@ -22,7 +22,7 @@ The null model used in `econullnetr` was developed in the context of testing for
 This document provides a brief introduction to the `econullnetr` package, followed by two examples using data sets from the package to illustrate a range of functionality and how to combine `econullnetr` with the `igraph` package (Csardi and Nepusz 2006). For more details of the null model, see Agusti *et al*., (2003) and Vaughan *et al*. (2018), and the individual help files for more information about the example data sets and individual functions. 
 
 ### Basic summary of the package
-`econullnetr` comprises six functions for running null models, plotting the outputs, performing a range of statistical analyses and exporting the outputs in a form that can be imported into other network packages (Table 1). The two dedicated functions for bipartite networks (`bipartite_stats` and `plot_bipartite`) are wrappers for functions in the bipartite package (Dormann *et al*. 2008, 2009), accessing its extensive set of tools for plotting and analysing networks.
+`econullnetr` comprises seven functions for running null models, plotting the outputs, performing a range of statistical analyses and exporting the outputs in a form that can be imported into other network packages (Table 1). The two dedicated functions for bipartite networks (`bipartite_stats` and `plot_bipartite`) are wrappers for functions in the bipartite package (Dormann *et al*. 2008, 2009), accessing its extensive set of tools for plotting and analysing networks.
 
 **Table 1**. List of functions in `econullnetr`.
 
@@ -42,6 +42,8 @@ This document provides a brief introduction to the `econullnetr` package, follow
 |                     |   `plotweb` function (Dormann *et al*., 2008)              |
 |`generate_edgelist`  |	Export the null model results in a standard output that    |
 |                     |  is compatible with other network analysis packages in R   |
+|`expand_matrix`      | Convert summarised interaction matrices into a format for  |
+|                     |  use with `generate_null_net`                              |
 
 ### Data types
 `econullnetr` has been designed for situations where two things are available: i) data describing the interactions between each individual consumer and the set of resources available to it (cf. already summarised at the species (node) level in an interaction matrix), and ii) independent estimates of the density of the different resources e.g. floral abundance or the density of potential prey species. 
@@ -156,13 +158,14 @@ A warning message appears to highlight that there are two instances where the pr
 Preference plots are created for the two predators, using the data frame `WelshStreams.order` to set the order in which bars are plotted: this is the taxonomic order according to the [Centre for Ecology and Hydrology's coded macroinvertebrate list](https://www.ceh.ac.uk/services/coded-macroinvertebrates-list).
 
 ```{r, fig.height=4, fig.width=8}
-par(mfrow = c(1, 2))
+op <- par(mfrow = c(1, 2))
 plot_preferences(stream.1, "Rhyacophila", signif.level = 0.95, type = "counts", 
                  xlab = "Num. of prey detections", res.order = 
                  WelshStreams.order, p.cex = 1.5, l.cex = 0.9, lwd = 2)
 plot_preferences(stream.1, "Dinocras", signif.level = 0.95, type = "counts", 
                  xlab = "Num. of prey detections", res.order = 
                  WelshStreams.order, p.cex = 1.5, l.cex = 0.9, lwd = 2)
+par(op)
 ```
 
 The two predator species show similar overall preferences, one of the key differences being the asymmetry of the intraguild predation: the caddisfly *Rhyacophila* predated the stonefly *Dinocras* less often than expected, whilst *Dinocra*s appeared to favour *Rhyacophila*. 

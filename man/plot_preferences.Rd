@@ -64,6 +64,9 @@ when using \code{style = "dots"}.}
 \code{lwd}, \code{xlab}, \code{ylab}, \code{main}, \code{xlim} and
 \code{ylim}.}
 }
+\value{
+No return value, called for side effects.
+}
 \description{
 Takes a 'nullnet' object from running a null model with
   \code{generate_null_net} and plots the observed and expected link
@@ -84,21 +87,25 @@ Plots the preferences for individual consumer species. The bar plot
 null.1 <- generate_null_net(WelshStreams[, 2:18], WelshStreams.prey[, 2:17],
                             sims = 10, c.samples = WelshStreams[, 1],
                             r.samples = WelshStreams.prey[, 1])
+
 # Basic plots, showing the dot and bar plot styles. Increased lower margin
 #   on the bar plot so that names fit
 plot_preferences(null.1, "Dinocras", signif.level = 0.95, type = "counts",
                  xlab = "Num. of visits", p.cex = 1.2, lwd = 2)
 
-par(mar = c(9, 4, 4, 2) + 0.1)
+op <- par(mar = c(9, 4, 4, 2) + 0.1)
 plot_preferences(null.1, "Dinocras", style = "bars", signif.level = 0.95,
                  type = "counts", ylab = "Num. of visits")
+par(op)
 
 # Same results, this time showing the standardised effect sizes
 plot_preferences(null.1, "Rhyacophila", signif.level = 0.95,
                  type = "SES", xlab = "SES")
-par(mar = c(9, 4, 4, 2) + 0.1)
+
+op <- par(mar = c(9, 4, 4, 2) + 0.1)
 plot_preferences(null.1, "Rhyacophila", signif.level = 0.95, style = "bars",
                  type = "SES", ylab = "SES")
+par(op)
 
 }
 \references{
