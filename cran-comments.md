@@ -7,7 +7,7 @@ This is a resubmission.
 * User options re-set in plot_preferences.R and plot_preferences.Rd, and in inst/doc/econullnetr-intro.R.
 
 ## Test environments
-* local Windows 10, R 4.0.4
+* local Windows 10, R 4.1.0
 * Ubuntu 16.04 on Travis CI, R 4.0.2 and R-devel.
 * Mac OS X 10.13.6 on Travis CI, R 4.0.4.
 
