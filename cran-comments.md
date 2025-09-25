@@ -1,14 +1,13 @@
 ## Resubmission
 This is a resubmission. 
-* Replaced expect_equal_to_reference function with expect_known_value in unit tests testthat/test_generate_edgelist.R and testthat/test_test_interactions.R to correct error in CRAN package check results.
-* Updated URLs in man/generate_edgelist.Rd, man/plot_bipartite.Rd, man/plot_preferences.Rd, R/generate_edgelist.R, R/plot_bipartite.R and R/plot_preferences.R.
-* Updated doi format in DESCRIPTION.
-* Added @return tag to plot_bipartite.R and plot_preferences.R, and \value to plot_bipartite.Rd and plot_preferences.Rd.
-* User options re-set in plot_preferences.R and plot_preferences.Rd, and in inst/doc/econullnetr-intro.R.
+* Updates format of DESCRIPTION and CITATION files.
+* Corrects bug in plot_bipartite function, following updated bipartite v2.22
+* Replaces use of if-class with inherits.
 
 ## Test environments
-* local Windows 10, R 4.1.0
-* Ubuntu 16.04 on Travis CI, R 4.0.2 and R-devel.
+* local Windows 11, R 4.5.1
+* R-release on MacOS 15, Windows and Ubuntu 24.04 on GitHub Actions
+* R-devel and oldrel-1 on Ubuntu 24.04 on GitHub Actions.
 
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs.
