@@ -5,6 +5,9 @@
 #'   \code{\link[bipartite]{plotweb}} function (Dormann \emph{et al}., 2008),
 #'   colour coding the links in the familiar bipartite plots according to
 #'   whether they are stronger, weaker or consistent with the null model.
+#'   Following revisions to \code{plotweb} in \code{bipartite} v2.22, this
+#'   currently uses the older version of this function, now called
+#'   \code{\link[bipartite]{plotweb_deprecated}}.
 #'
 #' @param nullnet An object of class "nullnet" from \code{generate_null_net}
 #' @param signif.level An optional value specifying the threshold used for
@@ -16,16 +19,17 @@
 #'   friendly blue, white and red scheme, using colorbrewer's Red-Blue
 #'   colour scheme (Brewer 2017).
 #' @param ... Other arguments to be supplied to \code{bipartite}'s
-#'   \code{plotweb} function.
+#'   \code{plotweb_deprecated} function.
 #'
-#' @details Extensive options can be passed to \code{\link[bipartite]{plotweb}}
-#'   to customise the network plot beyond the colour coding of the links. See
-#'   the appropriate help file in the bipartite package for details.
+#' @details Extensive options can be passed to
+#'   \code{\link[bipartite]{plotweb_deprecated}} to customise the network plot
+#'   beyond the colour coding of the links. See the appropriate help file in the
+#'   bipartite package for details.
 #'
 #' @return No return value, called for side effects.
 #'
 #' @seealso \code{\link{generate_null_net}}, \code{\link{bipartite_stats}},
-#'   \code{\link[bipartite]{plotweb}}
+#'   \code{\link[bipartite]{plotweb_deprecated}}
 #'
 #' @references Brewer, C.A. (2017) \url{https://colorbrewer2.org/}
 #'
@@ -64,7 +68,7 @@ plot_bipartite <- function(nullnet, signif.level = 0.95,
                            edge.cols = c("#67A9CF", "#F7F7F7", "#EF8A62"), ...) {
   # --------------------------------------
   # Return an error if a object from 'generate_null_net' is not supplied
-  if(class(nullnet) != "nullnet") stop(
+  if(!inherits(nullnet, "nullnet")) stop(
     "plot_bipartite requires a nullnet object")
   # --------------------------------------
   # Set significance level
@@ -117,7 +121,7 @@ plot_bipartite <- function(nullnet, signif.level = 0.95,
 
   # --------------------------------------
   # Generate bipartite web plot
-  bipartite::plotweb(obs.web, method = "normal", empty = FALSE,
+  bipartite::plotweb_deprecated(obs.web, method = "normal", empty = FALSE,
                      col.interaction = select.vector, ...)
 }
 

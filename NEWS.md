@@ -1,3 +1,8 @@
+# econullnetr 0.2.2
+* Updates plot_bipartite to use plotweb_deprecated in bipartite package
+* Corrected formatting of CITATION and DESCRIPTION files
+* Replaced 'if' with 'inherits' for checking class nullnet
+
 # econullnetr 0.2.1
 * Updates unit tests to reflect new version of testthat package
 

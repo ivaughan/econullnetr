@@ -26,7 +26,7 @@ friendly blue, white and red scheme, using colorbrewer's Red-Blue
 colour scheme (Brewer 2017).}
 
 \item{...}{Other arguments to be supplied to \code{bipartite}'s
-\code{plotweb} function.}
+\code{plotweb_deprecated} function.}
 }
 \value{
 No return value, called for side effects.
@@ -36,11 +36,15 @@ Acts as a wrapper for the \code{bipartite} package's
   \code{\link[bipartite]{plotweb}} function (Dormann \emph{et al}., 2008),
   colour coding the links in the familiar bipartite plots according to
   whether they are stronger, weaker or consistent with the null model.
+  Following revisions to \code{plotweb} in \code{bipartite} v2.22, this
+  currently uses the older version of this function, now called
+  \code{\link[bipartite]{plotweb_deprecated}}.
 }
 \details{
-Extensive options can be passed to \code{\link[bipartite]{plotweb}}
-  to customise the network plot beyond the colour coding of the links. See
-  the appropriate help file in the bipartite package for details.
+Extensive options can be passed to
+  \code{\link[bipartite]{plotweb_deprecated}} to customise the network plot
+  beyond the colour coding of the links. See the appropriate help file in the
+  bipartite package for details.
 }
 \examples{
 
@@ -75,5 +79,5 @@ Brewer, C.A. (2017) \url{https://colorbrewer2.org/}
 }
 \seealso{
 \code{\link{generate_null_net}}, \code{\link{bipartite_stats}},
-  \code{\link[bipartite]{plotweb}}
+  \code{\link[bipartite]{plotweb_deprecated}}
 }

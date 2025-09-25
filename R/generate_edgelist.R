@@ -81,7 +81,7 @@ generate_edgelist <- function(nullnet, signif.level = 0.95, export.null = FALSE,
                               edge.cols = c("#67A9CF", "#F7F7F7", "#EF8A62")) {
   # --------------------------------------
   # Return an error if a object from 'generate_null_net' is not supplied
-  if(class(nullnet) != "nullnet") stop(
+  if(!inherits(nullnet, "nullnet")) stop(
     "generate_edgelist requires a nullnet object")
   # --------------------------------------
   # --------------------------------------

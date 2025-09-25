@@ -1,31 +1,32 @@
 Package: econullnetr
 Type: Package
 Title: Null Model Analysis for Ecological Networks
-Version: 0.2.1
+Version: 0.2.2
 Depends: R (>= 2.10)
-Imports: reshape2, bipartite, gtools
+Imports: reshape2, bipartite (>= 2.22), gtools
 Suggests: igraph,
     knitr,
     readr,
     rmarkdown,
     testthat,
     vdiffr
-Author: Ian Vaughan
-Maintainer: Ian Vaughan <vaughanip@cardiff.ac.uk>
-BugReports: https://github.com/ivaughan/econullnetr/issues
-Description: Tools for using null models to analyse ecological
-    networks (e.g. food webs, flower-visitation networks, seed-dispersal
-    networks) and detect resource preferences or non-random interactions among
-    network nodes. Tools are provided to run null models, test for and plot
-    preferences, plot and analyse bipartite networks, and export null model
-    results in a form compatible with other network analysis packages. The 
-    underlying null model was developed by Agusti et al. (2003) Molecular 
-    Ecology <doi:10.1046/j.1365-294X.2003.02014.x> and the full application to 
+Authors@R: person("Ian", "Vaughan", email = "vaughanip@cardiff.ac.uk", 
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7263-3822"))
+Description: Null models to analyse ecological networks (e.g. food webs, 
+    flower-visitation networks, seed-dispersal networks) and detect resource 
+    preferences or non-random interactions among network nodes. Tools are 
+    provided to run null models, test for and plot preferences, plot and 
+    analyse bipartite networks, and export null model results in a form 
+    compatible with other network analysis packages. The underlying null model 
+    was developed by Agusti et al. (2003) Molecular Ecology 
+    <doi:10.1046/j.1365-294X.2003.02014.x> and the full application to 
     ecological networks by Vaughan et al. (2018) econullnetr: an R package 
     using null models to analyse the structure of ecological networks and 
     identify resource selection. Methods in Ecology & Evolution, 
     <doi:10.1111/2041-210X.12907>.
+BugReports: https://github.com/ivaughan/econullnetr/issues
 License: MIT + file LICENSE
 LazyData: TRUE
-RoxygenNote: 7.1.1
+Encoding: UTF-8
+RoxygenNote: 7.3.3
 VignetteBuilder: knitr

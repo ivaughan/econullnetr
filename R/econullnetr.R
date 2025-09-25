@@ -10,6 +10,5 @@
 #'   models to analyse the structure of ecological networks and identify resource
 #'   selection. \emph{Methods in Ecology and Evolution}, \strong{9}, 728--733.
 #'
-#' @docType package
 #' @name econullnetr
-NULL
+"_PACKAGE"

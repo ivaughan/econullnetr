@@ -132,7 +132,7 @@ bipartite_stats <- function(nullnet, signif.level = 0.95, index.type,
                             indices, prog.count = TRUE, ...) {
   # --------------------------------------
   # Return an error if a object from 'generate_null_net' is not supplied
-  if(class(nullnet) != "nullnet") {
+  if(!inherits(nullnet, "nullnet")) {
     stop("bipartite_stats requires a nullnet object")}
     # Return error if selected indices are not supported
   if("degree distribution" %in% indices) {

@@ -2,6 +2,7 @@
 % Please edit documentation in R/econullnetr.R
 \docType{package}
 \name{econullnetr}
+\alias{econullnetr-package}
 \alias{econullnetr}
 \title{econullnetr: tools for using null models to analyse the structure of ecological
   networks and identify resource selection}
@@ -15,4 +16,15 @@ Vaughan, I.P., Gotelli, N.J., Memmott, J., Pearson, C.E.,
   Woodward, G. & Symondson, W.O.C. (2018) econullnetr: an R package using null
   models to analyse the structure of ecological networks and identify resource
   selection. \emph{Methods in Ecology and Evolution}, \strong{9}, 728--733.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item Report bugs at \url{https://github.com/ivaughan/econullnetr/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ian Vaughan \email{vaughanip@cardiff.ac.uk} (\href{https://orcid.org/0000-0002-7263-3822}{ORCID})
+
 }

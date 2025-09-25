@@ -81,7 +81,7 @@
 test_interactions <- function(nullnet, signif.level = 0.95) {
   # --------------------------------------
   # Return an error if a object from 'generate_null_net' is not supplied
-  if(class(nullnet) != "nullnet") stop(
+  if(!inherits(nullnet, "nullnet")) stop(
     "test_interactions requires a nullnet object")
 
   # --------------------------------------

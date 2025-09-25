@@ -119,7 +119,7 @@ plot_preferences <- function(nullnet, node, signif.level = 0.95,
   # --------------------------------------
   # Initial error handling:
   # 1. Return an error if a object from 'generate_null_net' is not supplied
-  if(class(nullnet) != "nullnet") {
+  if(!inherits(nullnet, "nullnet")) {
     stop("plot_preferences requires a nullnet object")}
 
   # 2. type <> "counts" or "SES", or style <> "dots" or "bars"
