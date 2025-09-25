@@ -2,7 +2,7 @@
 #'
 #' The rank order of 16 prey taxa in \code{\link{WelshStreams}} on the Centre for
 #'   Ecology and Hydrology's Coded Macroinvertebrate List
-#'   \url{https://www.ceh.ac.uk/services/coded-macroinvertebrates-list}. This is
+#'   \url{https://www.ceh.ac.uk/data/software-models/coded-macroinvertebrates-list}. This is
 #'   used primarily for controlling the order in which prey taxa are plotted
 #'   with \code{\link{plot_preferences}}.
 #'

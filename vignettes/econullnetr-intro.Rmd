@@ -155,7 +155,7 @@ stream.1 <- generate_null_net(WelshStreams[, 2:18], WelshStreams.prey[, 2:17],
 
 A warning message appears to highlight that there are two instances where the predators consumed a taxon that was not found in the kick sample for that stream: one stream each for Asellidae and *Philopotamus*. For simplicity, these will be ignored here, but in other situations it may be desirable to take action e.g. removing these taxa altogether or adding a small non-zero constant to the abundance data so that they could be sampled in the null model.
 
-Preference plots are created for the two predators, using the data frame `WelshStreams.order` to set the order in which bars are plotted: this is the taxonomic order according to the [Centre for Ecology and Hydrology's coded macroinvertebrate list](https://www.ceh.ac.uk/services/coded-macroinvertebrates-list).
+Preference plots are created for the two predators, using the data frame `WelshStreams.order` to set the order in which bars are plotted: this is the taxonomic order according to the [Centre for Ecology and Hydrology's coded macroinvertebrate list](https://www.ceh.ac.uk/data/software-models/coded-macroinvertebrates-list).
 
 ```{r, fig.height=4, fig.width=8}
 op <- par(mfrow = c(1, 2))
