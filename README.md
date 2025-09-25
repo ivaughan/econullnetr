@@ -1,3 +1,4 @@
+[![R-CMD-check.yaml](https://github.com/ivaughan/econullnetr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ivaughan/econullnetr/actions/workflows/R-CMD-check.yaml)
 
 ## Overview
 
